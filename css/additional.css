@@ -1,0 +1,44 @@
+.reveal p{
+    line-height: 1.4em;
+}
+
+.reveal li{
+    margin-bottom: 0.4em;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.half{
+    width: 48%;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.left a,
+.right a,
+.left img,
+.right img{
+    display: block;
+}
+
+.left img,
+.right img{
+    height: 250px;
+}
+
+.left p a,
+.right p a{
+    display: inline;
+}
+
+.left p,
+.right p{
+    margin-top: 1.2em;
+}

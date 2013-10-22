@@ -1,0 +1,366 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Atomic Design & PatternLab</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/additional.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal linear">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-background="#10393D" class="text-left">
+                    <h1>Atomic Design & PatternLab</h1>
+                    <p>
+                        <small>Kevin Heil</small>
+                    </p>
+                    <p>
+                        <small>Florenz Heldermann</small>
+                    </p>
+                </section>
+
+                <section data-background="#1A5951" class="text-left">
+                    <section>
+                        <article class="left half">
+                            <h3>Kevin Heil</h3>
+                            <img src="img/kevin.jpeg">
+                            <a href="http://www.twitter.com/stockimarsch">@stockimarsch</a>
+                            <a href="http://www.hmmh.de">hmmh</a>
+                            <p>
+                                münchbremberger, grafikcoder & clownfisch
+                            </p>
+                        </article>
+
+                        <article class="right half">
+                            <h3>Florenz Heldermann</h3>
+                            <img src="img/florenz.jpg">
+
+                            <a href="http://www.twitter.com/track02">@track02</a>
+                            <a href="http://www.hmmh.de">hmmh</a>
+                            <p>
+                                Frontend enthusiast, coffee addicted & videogame junkie.
+                            </p>
+                        </article>
+                    </section>
+
+                    <section>
+                        <h2>Hände hoch!</h2>
+                        <div class="fragment">
+                            <p>Wieviele Grafiker <span class="fragment">, Entwickler</span> <span class="fragment">, sonstige Professionen</span></p>
+                            <p>sind heute hier?</p>
+
+                        </div>
+                    </section>
+                </section>
+
+                <section data-background="#469D7A">
+                    <section class="text-left">
+                        <h2>Previously</h2>
+                        <small>not on breaking bad</small>
+                    </section>
+
+                    <section>
+                        <img src="img/css.gif" alt="CSS">
+                    </section>
+
+                    <section>
+                        <img src="img/css-layout.jpg" alt="">
+                    </section>
+                </section>
+
+                <section data-background="#A4C290">
+                    <section>
+                        <img src="img/purecss.png" alt="Pure CSS">
+                    </section>
+
+                    <section>
+                        <img src="img/foundation.png" alt="Foundation by Zurb">
+                    </section>
+
+                    <section>
+                        <img src="img/bootstrap.png" alt="Twitter Bootstrap">
+                    </section>
+
+                    <section>
+                        <p>Viele Frameworks vorhanden</p>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>Foundation</li>
+                            <li>Pure CSS</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p>Solche Frameworks bringen viele Vorteile</p>
+                        <ul>
+                            <li class="fragment">Schnelles Prototyping</li>
+                            <li class="fragment">Viele Best-Practices</li>
+                            <li class="fragment">Hohe Browser Kompatiblität</li>
+                            <li class="fragment">etc.</li>
+                        </ul>
+
+                    </section>
+
+                    <section class="text-left">
+                        <h2>Aber...</h2>
+                    </section>
+
+
+
+                    <section>
+                        <ul>
+                            <li>Konventionen, Benennung & Struktur anderer muss übernommen werden</li>
+                            <li class="fragment">"one-size-fits-all" aka. Massenlösungen</li>
+                            <li class="fragment">Code Bloat</li>
+                            <li class="fragment">niemals perfekt für die eigene Lösung</li>
+                            <li class="fragment">schlecht skalierbar</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section data-background="#469D7A" class="text-left">
+                    <h2>Zukunft</h2>
+                    <p class="fragment">(ab jetzt)</p>
+                </section>
+
+                <section data-background="#1A5951">
+                    <img src="img/gud.gif" alt="">
+                </section>
+
+                <section data-background="#10393D">
+                    <section>
+                        <blockquote>Tiny bootstraps for every client</blockquote>
+                        <cite>&mdash; Dave Rupert</cite>
+                        <br><br>
+                        <p>
+                            <small><a href="http://daverupert.com/2013/04/responsive-deliverables/">siehe: Responsive Deliverables</a></small>
+                        </p>
+
+                    </section>
+                    <section class="text-left">
+                        <p>"Pattern Libraries" sind keine neue Idee</p>
+                    </section>
+                    <section class="text-left">
+                        <p>Viele Bibliotheken bereits vorhanden</p>
+                    </section>
+
+                    <section><img src="img/styletiles.png" alt=""></section>
+                    <section><img src="img/mdpl.png" alt=""></section>
+                    <section><img src="img/uipatterns.png" alt=""></section>
+                    <section><img src="img/tir.png" alt="This is Responsive"></section>
+                    <section class="text-left">
+                        <h2>aber</h2>
+                        <h2 class="fragment">Mo' Patterns</h2>
+                        <h2 class="fragment">Mo' Problems</h2>
+
+                    </section>
+
+                    <section>
+                        <ul>
+                            <li>Zeitaufwand</li>
+                            <li class="fragment">Zweites zusätzliches Projekt</li>
+                            <li class="fragment">Erstellung erfolgt meistens nach dem Launch</li>
+                            <li class="fragment">Abstrakt</li>
+                            <li class="fragment">Design / Devtool</li>
+                        </ul>
+
+                    </section>
+                </section>
+
+                <section data-background="#1A5951">
+
+                    <section><h2>Patternlab</h2></section>
+                    <section><p><a href="https://github.com/pattern-lab/patternlab-php">https://github.com/pattern-lab/patternlab-php</a></p>
+                    <aside class="notes">ganz wichtig das die community daran mitwerkelt</aside>
+                    </section>
+                    <section>
+                        <img src="img/tellerrand-dantz.png" alt="">
+                        <p>Quelle: &#9825; andreasdantz</p>
+                        <p>Video: <a href="http://vimeo.com/67476280">http://vimeo.com/67476280</a></p>
+
+                    </section>
+
+
+                    <section><img src="img/atomic.png" alt="Atomic Design"></section>
+                    <section><img src="img/htmlelements2.png" alt=""><aside class="notes">html elemente! ELEMENTE! E-LE-MEN-TE!!!!111einseinself</aside></section>
+                    <section><img src="img/elements.png" alt="Periodensystem"></section>
+                    <section>
+                        <img src="img/htmlelements.png" alt=""><p>Quelle: http://joshduck.com/periodic-table.html</p>
+
+                    </section>
+                    <section>
+                        <p>H<sub>2</sub> + O = H<sub>2</sub>O</p>
+                        <p>Überschrift + Text + Link + Bild = Teaserelement</p>
+                        <aside class="notes">
+                            <p>Wenn man alles richtig macht fühlt man sich etwas wie .... </p>
+                        </aside>
+                    </section>
+                    <section><img src="img/heisenberg.gif" alt="Heisenberg"></section>
+                    <section>
+                        <img src="img/atomic.png" alt="Atomic Design">
+
+                    </section>
+                    <section class="text-left">
+                        <article class="left half">
+                            <h3>Brad Frost</h3>
+                            <img src="img/braddy.png">
+                            <a href="http://www.twitter.com/brad_frost">@brad_frost</a>
+                            <a href="http://www.bradfrostweb.com">bradfrostweb.com</a>
+
+                        </article>
+
+                        <article class="right half">
+                            <h3>Dave Olsen</h3>
+                            <img src="img/dmolsen.jpg">
+
+                            <a href="http://www.twitter.com/dmolsen">@dmolsen</a>
+                            <a href="http://www.dmolsen.com">dmolsen.com</a>
+
+                        </article>
+
+                    </section>
+
+                    <section>
+                        <h2>Merkmale</h2>
+                        <ul>
+                            <li class="fragment">PHP basierender Static Site Generator</li>
+                            <li class="fragment">Webserver nicht zwingend</li>
+                            <li class="fragment">Mustache Template Engine</li>
+                            <li class="fragment">Live Reload</li>
+                            <li class="fragment">Multi Browser Multi Device Testing</li>
+                        </ul>
+
+                    </section>
+
+                    <section>
+                        <h2>Kommende / Wiederkehrende Features</h2>
+                        <ul>
+                            <li class="fragment">Annotationen</li>
+                            <li class="fragment">Direkt Ansicht</li>
+                            <li class="fragment">Code Ansicht</li>
+                        </ul>
+
+                    </section>
+
+                </section>
+
+                <section data-background="#469D7A">
+                    <h3>(dramatische Pause)</h3>
+                </section>
+
+                <section data-background="#A4C290">
+                    <h2>Progressive Live Demo</h2>
+                </section>
+
+                <section data-background="#469D7A">
+                    <section>
+                        <h2>PatternLab ist...</h2>
+                        <ul>
+                            <li class="fragment">... eine Komponentenbibliothek</li>
+                            <li class="fragment">... ein Starter Kit für eigene Bibliotheken</li>
+                            <li class="fragment">... eine Design System Software</li>
+                            <li class="fragment">... ein Responsive Design Tester</li>
+                            <li class="fragment">... ein "Living Styleguide"</li>
+                            <li class="fragment">... ein "Design Annotation Tool"</li>
+                        </ul>
+
+                    </section>
+
+                    <section>
+                        <h2>PatternLab ist nicht...</h2>
+                        <ul>
+                            <li class="fragment">... ein UI Framework</li>
+                            <li class="fragment">... abhänging von Sprachen, Bibliotheken, Stil</li>
+                            <li class="fragment">... unfassbar starr</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>... ein UI Framework</li>
+                                <li>... abhänging von Sprachen, Bibliotheken, Stil</li>
+                                <li>... unfassbar starr</li>
+                            </ul>
+
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Nicht nur PHP</h2>
+                        <p>Prinzip: Du willst kein PHP, mach dein eigenes</p>
+                        <ul>
+                            <li class="fragment">Node <a href="https://github.com/midnightspecial/patternlab-node">https://github.com/midnightspecial/patternlab-node</a></li>
+                            <li class="fragment">Jekyll <a href="https://github.com/zakkain/patternlab-jekyll">https://github.com/zakkain/patternlab-jekyll</a></li>
+                            <li class="fragment">Tapestry <a href="https://github.com/PebbleRoad/tapestry">https://github.com/PebbleRoad/tapestry</a></li>
+                        </ul>
+
+                    </section>
+                </section>
+
+                <section data-background="#1A5951">
+                    <section><h2>Danke für's Zuhören</h2></section>
+                    <section>
+                        <h2>Fragen?</h2>
+                        <img class="" src="img/fragen.gif" alt="">
+                    </section>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                backgroundTransition: 'slide',
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
