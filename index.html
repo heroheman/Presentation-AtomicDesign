@@ -217,23 +217,23 @@
                     <section class="text-left">
                         <h3>Atome</h3>
                         <img src="img/atome.png" class="fragment">
-                    </section> 
+                    </section>
                     <section class="text-left">
                         <h3>Moleküle</h3>
                         <img src="img/molekuel.png" class="fragment">
-                    </section> 
+                    </section>
                     <section class="text-left">
                         <h3>Organismen</h3>
                         <img src="img/organismus.png" class="fragment">
-                    </section> 
+                    </section>
                     <section class="text-left">
                         <h3>Template</h3>
                         <img src="img/template.png" class="fragment">
-                    </section> 
+                    </section>
                     <section class="text-left">
                         <h3>Pages</h3>
                         <img src="img/pages.png" class="fragment">
-                    </section> 
+                    </section>
                     <section>
                         <p>H<sub>2</sub> + O = H<sub>2</sub>O</p>
                         <p>Überschrift + Text + Link + Bild = Teaserelement</p>
@@ -303,6 +303,12 @@
                     <section>
                         <h2>Mustache</h2>
                     </section>
+
+                    <section>
+                        <!-- <img src="img/mustache-15.jpg" alt=""> -->
+                        <img src="img/5d6.jpg" alt="">
+                    </section>
+
                     <section>
                         <h2>index.html</h2>
                         <pre><code data-trim>
@@ -401,6 +407,71 @@
 <a href="{{ nav.linksource }}">{{ nav.linkname }}</a>
 </code></pre>
                         </div>
+                    </section>
+
+                    <section>
+                        <h2>Noch dynamischere Inhalte</h2>
+                        <p><small>patterns/01-template/01-index.mustache</small></p>
+<pre><code data-trim>
+...
+<ul>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+</ul>
+...
+</code></pre>
+                        <p><small>patterns/01-pages/01-index.mustache</small></p>
+<pre><code data-trim>
+...
+<ul>
+    {{# real-navigation}}
+        <li><a href="#">{{> atoms-link-elem }}</a></li>
+    {{/ real-navigation}}
+</ul>
+...
+</code></pre>
+
+                    </section>
+
+                    <section>
+                        <p><small>patterns/01-pages/01-index.json</small></p>
+<pre><code data-trim>
+{
+    "real-navigation" : [
+        {
+            "nav":{
+                "linkname" : "Startseite",
+                "linksource" : "index.html"
+            }
+        },
+        {
+            "nav":{
+                "linkname" : "Portfolio",
+                "linksource" : "projects.html"
+            }
+        },
+        {
+            "nav":{
+                "linkname" : "About",
+                "linksource" : "about.html"
+            }
+        }
+    ]
+}
+</code></pre>
+                    </section>
+
+                    <section>
+<pre><code data-trim>
+...
+<ul>
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+</ul>
+...
+</code></pre>
                     </section>
 
                 </section>
