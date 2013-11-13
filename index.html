@@ -214,6 +214,28 @@
                         <img src="img/htmlelements.png" alt=""><p>Quelle: http://joshduck.com/periodic-table.html</p>
 
                     </section>
+
+                    <section class="text-left">
+                        <h3>Atome</h3>
+                        <img src="img/atome.png" class="fragment">
+                    </section>
+                    <section class="text-left">
+                        <h3>Moleküle</h3>
+                        <img src="img/molekuel.png" class="fragment">
+                    </section>
+                    <section class="text-left">
+                        <h3>Organismen</h3>
+                        <img src="img/organismus.png" class="fragment">
+                    </section>
+                    <section class="text-left">
+                        <h3>Template</h3>
+                        <img src="img/template.png" class="fragment">
+                    </section>
+                    <section class="text-left">
+                        <h3>Pages</h3>
+                        <img src="img/pages.png" class="fragment">
+                    </section>
+
                     <section>
                         <p>H<sub>2</sub> + O = H<sub>2</sub>O</p>
                         <p>Überschrift + Text + Link + Bild = Teaserelement</p>
@@ -276,6 +298,186 @@
 
                 <section data-background="#A4C290">
                     <h2>Progressive Live Demo</h2>
+
+
+                    <p class="fragment">heute nicht</p>
+                </section>
+
+                <section data-background="#1A5951">
+                    <section>
+                        <h2>Mustache</h2>
+                    </section>
+
+                    <section>
+                        <!-- <img src="img/mustache-15.jpg" alt=""> -->
+                        <img src="img/5d6.jpg" alt="">
+                    </section>
+
+                    <section>
+                        <h2>index.html</h2>
+                        <pre><code data-trim>
+<div class="container">
+    <header>
+        <img src="logo.jpg" alt="Mein tolles Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <h2>Überschrift</h2>
+        <div>Hier steht Content. Mit vielen Untermodulen</div>
+    </div>
+    <footer>
+        <p>&copy; 2013 &mdash; Beispiel AG</p>
+    </footer>
+</div>
+
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h3>Let's spalt the thing</h3>
+                        <p class="fragment" data-fragment-index="1"><small>patterns/atoms/03-text/01-link-elem.mustache</small></p>
+<pre><code data-trim>
+<a href="#">Link</a>
+</code></pre>
+                        </div>
+
+                        <div class="fragment" data-fragment-index="2">
+                            <p><small>patterns/molecules/01-navigation/10-main-navigation.mustache</small></p>
+<pre><code data-trim>
+<ul>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+</ul>
+</code></pre>
+                        </div>
+
+                        <div class="fragment" data-fragment-index="3">
+                            <p><small>patterns/organisms/01-globals/10-header.mustache</small></p>
+<pre><code data-trim>
+<header>
+    <img src="logo.jpg" alt="Mein tolles Logo">
+    <nav>
+        {{> molecules-main-navigation }}
+    </nav>
+</header>
+</code></pre>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>index.mustache</h2>
+                        <p><small>patterns/templates/10-index.mustache</small></p>
+<pre><code data-trim>
+<div class="container">
+    {{> organisms-header }}
+    <div class="content">
+        {{> atoms-headline-big }}
+        {{> molecules-paragraph}}
+        ...
+        {{> molecules-slideshow}}
+        {{> molecules-otherthings}}
+    </div>
+    {{> organisms-footer}}
+</div>
+</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Dynamische Inhalte</h2>
+                        <p><small>data/data.json</small></p>
+<pre><code data-trim>
+{
+    "headline" : {
+        "short" : "Lorem ipsum dolor sit (37 characters)",
+        "medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+    },
+    "nav":{
+        "linkname" : "Link",
+        "linksource" : "http://www.hmmh.de"
+    }
+}
+</code></pre>
+                        <div class="fragment">
+                        <p><small>patterns/atoms/03-text/01-link-elem.mustache</small></p>
+<pre><code data-trim>
+<a href="{{ nav.linksource }}">{{ nav.linkname }}</a>
+</code></pre>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Noch dynamischere Inhalte</h2>
+                        <p><small>patterns/01-template/01-index.mustache</small></p>
+<pre><code data-trim>
+...
+<ul>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+    <li><a href="#">{{> atoms-link-elem }}</a></li>
+</ul>
+...
+</code></pre>
+                        <p><small>patterns/01-pages/01-index.mustache</small></p>
+<pre><code data-trim>
+...
+<ul>
+    {{# real-navigation}}
+        <li><a href="#">{{> atoms-link-elem }}</a></li>
+    {{/ real-navigation}}
+</ul>
+...
+</code></pre>
+
+                    </section>
+
+                    <section>
+                        <p><small>patterns/01-pages/01-index.json</small></p>
+<pre><code data-trim>
+{
+    "real-navigation" : [
+        {
+            "nav":{
+                "linkname" : "Startseite",
+                "linksource" : "index.html"
+            }
+        },
+        {
+            "nav":{
+                "linkname" : "Portfolio",
+                "linksource" : "projects.html"
+            }
+        },
+        {
+            "nav":{
+                "linkname" : "About",
+                "linksource" : "about.html"
+            }
+        }
+    ]
+}
+</code></pre>
+                    </section>
+
+                    <section>
+<pre><code data-trim>
+...
+<ul>
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+</ul>
+...
+</code></pre>
+                    </section>
+
                 </section>
 
                 <section data-background="#469D7A">

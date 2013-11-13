@@ -41,4 +41,18 @@
 .left p,
 .right p{
     margin-top: 1.2em;
+
+}
+
+.reveal pre {
+    display: block;
+    position: relative;
+    width: auto;
+    margin: 0;
+    text-align: left;
+    font-size: .55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: none;
 }
